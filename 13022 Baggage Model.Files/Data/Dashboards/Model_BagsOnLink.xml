@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-AU">
+  <Title Visible="true" Text="Bags On Link" />
+  <DataSources>
+    <DataSource Name="Constraint Log" />
+    <DataSource Name="Interactive Results" />
+    <DataSource Name="Material Usage Log" />
+    <DataSource Name="Resource Capacity Log" />
+    <DataSource Name="Resource State Log" />
+    <DataSource Name="Resource Usage Log" />
+    <DataSource Name="State Observation Log" />
+    <DataSource Name="Table.BagDefinitionTable" />
+    <DataSource Name="Tally Observation Log" />
+    <DataSource Name="Transporter Usage Log" />
+    <DataSource Name="Table.AircraftData" />
+    <DataSource Name="Table.MFCTransferPassengerData" />
+    <DataSource Name="Table.OperatorData" />
+    <DataSource Name="Table.T2CheckInPassengerData" />
+  </DataSources>
+  <Items>
+    <Chart UniqueName="Chart 2" Name="Bags Entering Link" DataSource="Tally Observation Log" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS44LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuRnVuY3Rpb25PcGVyYXRvcgIAAAAIb3BlcmFuZHMMT3BlcmF0b3JUeXBlBAQ0RGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5Dcml0ZXJpYU9wZXJhdG9yQ29sbGVjdGlvbgIAAAAuRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5GdW5jdGlvbk9wZXJhdG9yVHlwZQIAAAACAAAACQMAAAAF/P///y5EZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkZ1bmN0aW9uT3BlcmF0b3JUeXBlAQAAAAd2YWx1ZV9fAAgCAAAALgAAAAUDAAAANERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvckNvbGxlY3Rpb24DAAAADUxpc3RgMStfaXRlbXMMTGlzdGAxK19zaXplD0xpc3RgMStfdmVyc2lvbgQAACxEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkNyaXRlcmlhT3BlcmF0b3JbXQIAAAAICAIAAAAJBQAAAAIAAAABAAAABwUAAAAAAQAAAAQAAAAEKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvcgIAAAAJBgAAAAkHAAAADQIFBgAAAClEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRQcm9wZXJ0eQEAAAAMcHJvcGVydHlOYW1lAQIAAAAGCAAAAAlEYXRhSXRlbTMFBwAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQEAAAAFdmFsdWUCAgAAAAYJAAAADU51bWJlckVudGVyZWQL">
+      <DataItems>
+        <Measure DataMember="Value" SummaryType="Max" UniqueName="DataItem0" />
+        <Dimension DataMember="Time" DateTimeGroupInterval="DateHourMinute" UniqueName="DataItem1" />
+        <Dimension DataMember="DataSource" UniqueName="DataItem3" />
+        <Dimension DataMember="ObjectName" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem3" />
+      </HiddenDimensions>
+      <InteractivityOptions IsMasterFilter="true" TargetDimensions="Series" />
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Bags (Max)" />
+          <Series>
+            <Simple SeriesType="StepLine">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="Time (Date-Hour-Minute-Second)" />
+    </Chart>
+    <RangeFilter UniqueName="Range Filter 1" DataSource="Tally Observation Log">
+      <DataItems>
+        <Dimension DataMember="Time" DateTimeGroupInterval="DateHourMinute" UniqueName="DataItem0" />
+        <Measure DataMember="Value" SummaryType="Max" UniqueName="DataItem1" />
+        <Dimension DataMember="ObjectName" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem0" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem1" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <Card UniqueName="Cards 1" Name="Maximum Bags On Link" DataSource="Tally Observation Log" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS44LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAJ0RldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuR3JvdXBPcGVyYXRvcgIAAAAIb3BlcmFuZHMMT3BlcmF0b3JUeXBlBAQ0RGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5Dcml0ZXJpYU9wZXJhdG9yQ29sbGVjdGlvbgIAAAArRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5Hcm91cE9wZXJhdG9yVHlwZQIAAAACAAAACQMAAAAF/P///ytEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkdyb3VwT3BlcmF0b3JUeXBlAQAAAAd2YWx1ZV9fAAgCAAAAAQAAAAUDAAAANERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvckNvbGxlY3Rpb24DAAAADUxpc3RgMStfaXRlbXMMTGlzdGAxK19zaXplD0xpc3RgMStfdmVyc2lvbgQAACxEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkNyaXRlcmlhT3BlcmF0b3JbXQIAAAAICAIAAAAJBQAAAAIAAAABAAAABwUAAAAAAQAAAAQAAAAEKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvcgIAAAAJBgAAAAkHAAAADQIFBgAAACpEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkZ1bmN0aW9uT3BlcmF0b3ICAAAACG9wZXJhbmRzDE9wZXJhdG9yVHlwZQQENERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvckNvbGxlY3Rpb24CAAAALkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuRnVuY3Rpb25PcGVyYXRvclR5cGUCAAAAAgAAAAkIAAAABff///8uRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5GdW5jdGlvbk9wZXJhdG9yVHlwZQEAAAAHdmFsdWVfXwAIAgAAAC4AAAABBwAAAAYAAAAJCgAAAAH1////9////y4AAAABCAAAAAMAAAAJDAAAAAIAAAABAAAAAQoAAAADAAAACQ0AAAACAAAAAQAAAAcMAAAAAAEAAAAEAAAABCpEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkNyaXRlcmlhT3BlcmF0b3ICAAAACQ4AAAAJDwAAAA0CBw0AAAAAAQAAAAQAAAAEKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvcgIAAAAJEAAAAAkRAAAADQIFDgAAAClEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRQcm9wZXJ0eQEAAAAMcHJvcGVydHlOYW1lAQIAAAAGEgAAAAlEYXRhSXRlbTMFDwAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQEAAAAFdmFsdWUCAgAAAAYTAAAADU51bWJlckVudGVyZWQBEAAAAA4AAAAJEgAAAAERAAAADwAAAAYVAAAADE51bWJlckV4aXRlZAs=">
+      <DataItems>
+        <Dimension DataMember="ObjectName" UniqueName="DataItem0" />
+        <Measure DataMember="Value" SummaryType="Max" UniqueName="DataItem1" />
+        <Dimension DataMember="DataSource" UniqueName="DataItem3" />
+        <Dimension DataMember="DataSource" UniqueName="DataItem5" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem3" />
+      </HiddenDimensions>
+      <InteractivityOptions IsMasterFilter="true" IsDrillDownEnabled="true" />
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem0" />
+        <SeriesDimension UniqueName="DataItem5" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue UniqueName="DataItem1" />
+        <DeltaOptions />
+      </Card>
+    </Card>
+    <Chart UniqueName="Chart 1" Name="Bags Exiting Link" DataSource="Tally Observation Log" FilterCriteria="~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjEzLjEsIFZlcnNpb249MTMuMS44LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuRnVuY3Rpb25PcGVyYXRvcgIAAAAIb3BlcmFuZHMMT3BlcmF0b3JUeXBlBAQ0RGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5Dcml0ZXJpYU9wZXJhdG9yQ29sbGVjdGlvbgIAAAAuRGV2RXhwcmVzcy5EYXRhLkZpbHRlcmluZy5GdW5jdGlvbk9wZXJhdG9yVHlwZQIAAAACAAAACQMAAAAF/P///y5EZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkZ1bmN0aW9uT3BlcmF0b3JUeXBlAQAAAAd2YWx1ZV9fAAgCAAAALgAAAAUDAAAANERldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvckNvbGxlY3Rpb24DAAAADUxpc3RgMStfaXRlbXMMTGlzdGAxK19zaXplD0xpc3RgMStfdmVyc2lvbgQAACxEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkNyaXRlcmlhT3BlcmF0b3JbXQIAAAAICAIAAAAJBQAAAAIAAAABAAAABwUAAAAAAQAAAAQAAAAEKkRldkV4cHJlc3MuRGF0YS5GaWx0ZXJpbmcuQ3JpdGVyaWFPcGVyYXRvcgIAAAAJBgAAAAkHAAAADQIFBgAAAClEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRQcm9wZXJ0eQEAAAAMcHJvcGVydHlOYW1lAQIAAAAGCAAAAAlEYXRhSXRlbTMFBwAAACZEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLk9wZXJhbmRWYWx1ZQEAAAAFdmFsdWUCAgAAAAYJAAAADE51bWJlckV4aXRlZAs=">
+      <DataItems>
+        <Measure DataMember="Value" SummaryType="Max" UniqueName="DataItem0" />
+        <Dimension DataMember="Time" DateTimeGroupInterval="DateHourMinute" UniqueName="DataItem1" />
+        <Dimension DataMember="DataSource" UniqueName="DataItem3" />
+        <Dimension DataMember="ObjectName" UniqueName="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension UniqueName="DataItem3" />
+      </HiddenDimensions>
+      <InteractivityOptions IsMasterFilter="true" TargetDimensions="Series" />
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Bags (Max)" />
+          <Series>
+            <Simple SeriesType="StepLine">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend />
+      <AxisX Title="Time (Date-Hour-Minute-Second)" />
+    </Chart>
+  </Items>
+  <Layout>
+    <LayoutItem Name="Chart 2" Left="0.1763975155279503" Top="0.16036036036036036" Right="1" Bottom="0.5495495495495496" />
+    <LayoutItem Name="Range Filter 1" Left="0.1763975155279503" Top="0" Right="1" Bottom="0.16036036036036036" />
+    <LayoutItem Name="Cards 1" Left="0" Top="0" Right="0.1763975155279503" Bottom="1" />
+    <LayoutItem Name="Chart 1" Left="0.1763975155279503" Top="0.5495495495495496" Right="1" Bottom="1" />
+  </Layout>
+</Dashboard>
