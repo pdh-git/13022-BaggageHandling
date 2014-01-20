@@ -1,0 +1,9 @@
+# CSV and Log files #
+#####################
+*.csv
+*.log
+*trace*.*
+
+#   Backup files    #
+#####################
+*.backup
